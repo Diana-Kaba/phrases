@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phrases</title>
+    <style>
+        #word {
+            width: 400px;
+            height: 300px;
+            background-color: tan;
+        }
+
+        .card {
+            background-color: tan;
+            padding: 10px;
+            margin: 5px;
+            display: inline-block;
+            min-width: 65px;
+            text-align: center;
+        }
+
+        button {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="word" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
+    <div id="msg"></div>
+    <div id="drag1" class="card" draggable="true" ondragstart="drag(event)">This</div>
+    <div id="drag2" class="card" draggable="true" ondragstart="drag(event)">house</div>
+    <div id="drag3" class="card" draggable="true" ondragstart="drag(event)">is</div>
+    <div id="drag4" class="card" draggable="true" ondragstart="drag(event)">beautiful</div>
+
+    <button id="check">Check</button>
+    <script src="./script.js"></script>
+</body>
+
+</html>
