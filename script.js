@@ -1,5 +1,21 @@
-let phrase = "This house is beautiful";
+let phrases = [
+  "This house is beautiful",
+  "Remember who you are",
+  "Money costs too much",
+  "Life is beautiful, enjoy",
+  "Let your fears go",
+];
 let dropField = document.getElementById("word");
+
+function random(phrases) {
+  let randomWords = [];
+  let n;
+  for (let i = 0; i < 4; i++) {
+    n = Math.floor(Math.random() * phrases.length);
+    randomWords.push(phrases[n]);
+  }
+  return randomWords;
+}
 
 function allowDrop(event) {
   event.preventDefault();
@@ -18,7 +34,15 @@ function drop(event) {
 
 function check(event) {
   let str = dropField.innerHTML.trim();
-  alert(str == phrase ? "Correct!" : "Error!");
+  for (let i = 0; i < phrases.length; i++) {
+    if (str == phrases[i]) {
+      alert("Correct!");
+      break;
+    } else {
+      alert("Error!");
+      break;
+    }
+  }
 }
 
 let checkButton = document.getElementById("check");
