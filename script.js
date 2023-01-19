@@ -47,20 +47,9 @@ function drop(event) {
 }
 
 function check(event) {
-  let str = dropField.innerHTML.trim();
-  let c = false;
-  for (let i = 0; i < phrases.length; i++) {
-    if (str == phrases[i]) {
-      c = true;
-    } else {
-      c = false;
-    }
-  }
-  if (!c) {
-    alert("Error!");
-  } else {
-    alert("Correct!");
-  }
+  let str = dropField.innerText.trim();
+  console.log(str);
+  alert(str == phrase ? "Correct!" : "Error!");
 }
 
 function gen(arr) {
